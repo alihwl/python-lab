@@ -38,7 +38,7 @@ def main():
         print("=" * 26)
         
     except ValueError:
-        print("Entrée invalide. Veuillez entrer un nombre valide.")
+        print("Entrée invalide. Veuillez entrer u nombre valide.")
     except Exception as e:
         print(f"Une erreur s'est produite : {e}")
 
