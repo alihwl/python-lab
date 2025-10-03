@@ -1,5 +1,6 @@
 import textwrap
 import calendrier
+import ansi_colors as C
 
 
 def main():
@@ -34,7 +35,7 @@ def main():
         calendrier_formate = textwrap.fill(suite_complete, width=21)
         print(calendrier_formate)
         
-        print("=" * 26)
+        print(f"{C.BLUE}{'=' * 26}{C.RESET}")
         
     except ValueError:
         print("Entrée invalide. Veuillez entrer un nombre valide.")

@@ -1,4 +1,5 @@
 import calendar
+import ansi_colors as C
 
 
 MOIS_FR = ["", "janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
@@ -7,13 +8,13 @@ MOIS_FR = ["", "janvier", "février", "mars", "avril", "mai", "juin", "juillet",
 def afficher_titre(mois, annee):
     titre = f"{MOIS_FR[mois].capitalize()} {annee}"
     largeur = max(26, len(titre))
-    print("=" * largeur)
-    print(titre.center(largeur))
-    print("=" * largeur)
+    print(f"{C.BLUE}{'=' * largeur}{C.RESET}")
+    print(f"{C.BOLD}{C.CYAN}{titre.center(largeur)}{C.RESET}")
+    print(f"{C.BLUE}{'=' * largeur}{C.RESET}")
 
 
 def afficher_entete():
-     print("Lu Ma Me Je Ve Sa Di")
+    print(f"{C.YELLOW}Lu Ma Me Je Ve {C.RESET}{C.RED}Sa Di{C.RESET}")
 
 
 def numero_jour(jour, mois, annee):
